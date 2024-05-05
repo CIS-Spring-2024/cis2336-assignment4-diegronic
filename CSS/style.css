@@ -1,0 +1,308 @@
+#logo {
+    position: absolute;
+    top: 50%; /* Center the logo vertically */
+    left: 40px; /* Shift the logo to the right */
+    transform: translateY(-50%); /* Ensure the center of the logo is in the center */
+    height: 90px; /* Adjust as needed */
+}
+/* Montserrat for headers */
+h1, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: clamp(1em, 4vw, 3em);
+  }
+  
+/* Lora for subheaders */
+h2 {
+    font-family: 'Lora', serif;
+    font-size: clamp(.5em, 4vw, 1.5em);
+
+}
+
+p {
+    font-family: 'Maitree', serif;
+    font-size: clamp(.1em, 3vw, 1em);
+
+}
+
+/* Maitree for body text */
+body {
+    font-family: 'Maitree', serif;
+margin: 0; 
+    padding: 0; 
+    padding-top: 78px;
+    background-color: #e3e3e3; /* Light gray */
+    
+}
+
+.hamburger {
+    background-color: rgba(255, 255, 255, 0.87);
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+}
+
+.nav-links {
+    color: rgba(255, 255, 255, 0.87);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Add these styles for hamburger menu */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+/* Modify the styles for the hamburger icon */
+.hamburger-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #cd1d1d;
+    margin: 6px 0;
+    position: relative;
+}
+
+/* Add pseudo-elements to create additional lines */
+.hamburger-icon::before,
+.hamburger-icon::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #cd1d1d;
+    position: absolute;
+}
+
+/* Position the pseudo-elements to create the lines */
+.hamburger-icon::before {
+    top: -10px; /* Adjust position for the upper line */
+}
+
+.hamburger-icon::after {
+    bottom: -10px; /* Adjust position for the lower line */
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links a {
+        box-sizing: border-box; /* Include padding and border in element's total width and height */
+    }
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+        
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.87); /* Transparent white */
+        backdrop-filter: blur(10px); /* Add backdrop filter for blur effect (optional) */
+        box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.1); /* Add drop shadow */
+        position: absolute; /* Adjust the position */
+        top: 76px; /* Adjust the top position */
+        left: 0; /* Adjust the left position */
+        width: 100%; /* Take the full width */
+    }
+
+    .nav-links.active a {
+        color: #000000; /* Adjust link color for mobile menu */
+        text-align: center; /* Center align text */
+        padding: 10px 0; /* Add padding */
+    }
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0); /* Transparent white */
+    backdrop-filter: blur(10px); /* Add backdrop filter for blur effect (optional) */
+    color: #333; /* Change color to dark */
+    padding: .5rem;
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Ensure it appears above other content */
+    height: 60px; /* Adjust as needed */
+    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.242); /* Add drop shadow */
+    width: 100%;
+    
+}
+
+
+nav a {
+    font-weight: bold; /* Make the text bold */
+}
+
+
+nav ul {
+    display: flex;
+    gap: 1.2rem;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+
+
+
+.topnav {
+    margin-left: 150px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+
+.nav-links a {
+    margin-right: 20px; /* Adjust as needed */
+    position: relative;
+    text-decoration: none;
+    color: #333; /* Default color */
+    padding-bottom: 5px;
+}
+
+/* Adjust red line effect */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #cd1d1d; /* Red line color */
+    bottom: 0;
+    left: 0; /* Start from the left edge */
+    right: 0; /* End at the right edge */
+    margin: auto; /* Center the line */
+    transition: width 0.3s ease, left 0.3s ease, right 0.3s ease; /* Add left and right transition */
+}
+
+/* Adjust red line width and position on hover */
+.nav-links a:hover::after {
+    width: 100%; /* Full width */
+    left: 0; /* Start from the left edge */
+    right: 0; /* End at the right edge */
+}
+
+/* Adjust for active state */
+.nav-links a.active::after {
+    width: 100%; /* Full width */
+    left: 0; /* Start from the left edge */
+    right: 0; /* End at the right edge */
+    transition: none; /* Remove transition for active state */
+}
+
+
+.topnav a {
+    color: black; /* Change the color to black */
+    text-decoration: none; /* Remove the underline */
+    margin-right: 20px; /* Adjust as needed */
+}
+
+.topnav a:hover {
+    color: #cd1d1d;
+}
+
+.order-button {
+    margin-left: auto;
+}
+
+.split {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-inline: auto;
+    height: 85vh;
+    flex: 1 1 0;
+    
+}
+
+.split .text {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+    box-sizing: border-box;
+    
+    
+}
+
+.split .text p {
+    width: min(100% -30px, 840px);
+    margin-inline: auto;
+    padding: 7%;
+    
+}
+
+.split .image {
+    overflow: hidden; 
+}
+
+.split .image img {
+    object-fit: cover; /* This will scale the image as large as possible */
+    object-position: 65%; /* This will position the center of the image in the center of the container */
+    width: 100%; /* This will make sure the image takes the full width of the container */
+    height: 100%; /* This will make sure the image takes the full height of the container */
+}
+
+
+.split .text, .split .image {
+    width: clamp(250px, 50%, 400px);
+    flex: 1 1 0;
+    box-sizing: border-box;
+}
+
+#top-section {
+    background-color: rgba(255, 0, 0, 0.583); /* This is a light brown color */
+}
+
+
+
+
+.text1 {
+    background-color: #ff5c5ca4; /* Color for the first text section */
+}
+
+.text2 {
+    background-color: #ff9500d9; /* Color for the second text section */
+}
+
+.text3 {
+    background-color: #5cffa543; /* Color for the second text section */
+}
+
+.text4 {
+    background-color: #5ca5ffa8; /* Color for the second text section */
+}
+
+button {
+    
+    background-color: #cd1d1d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Adjust as needed */
+}
+
+

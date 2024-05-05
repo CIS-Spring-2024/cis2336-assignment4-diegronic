@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Growl Food®</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="order.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Maitree:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <a href="index.html">
+        <img src="images/logo.png" alt="Coffee Shop Logo" id="logo"> </a>
+            
+        
+        <div class="topnav"> 
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="about.html" >ABOUT US</a>
+                <a href="location.html">LOCATION</a>
+                <a href="contact.html">CONTACT US</a>
+            </div>
+            
+            <div class="order-button">
+                <a href="order.html" class="active">
+                    <button>ORDER</button>
+                </a>
+            </div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon"></div>
+            </div>
+        
+         </div>
+    </nav>
+    
+    
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#" onclick="scrollToSection('pizza', event)">PIZZA</a></li>               
+                <li><a href="#" onclick="scrollToSection('hamburgers', event)">HAMBURGERS</a></li>
+                <li><a href="#" onclick="scrollToSection('sandwiches', event)">SANDWICHES</a></li> 
+                <li><a href="#" onclick="scrollToSection('desserts', event)">DESSERTS</a></li> 
+                <!-- Cart icon -->
+                <div id="cart-icon">
+                    <img src="images/cart-icon.png" width="30px" alt="Cart">
+                    <!-- Additional cart-related content can be added here -->
+                    <!-- Cart menu -->
+                <div id="cart-menu">
+                    <!-- Cart container -->
+                    <div id="cart-container">
+                        <!-- Cart items will be displayed here -->
+                        <div id="cart-items"></div>
+                        
+                    </div>
+                </div>
+
+                
+                
+            </ul>
+        </nav>
+     
+    
+    <div id="menu">
+        
+        <section id="pizza" class="menu-section">
+            <div class="item-name">
+                <h3>Pizza</h3>
+            </div>
+                    <div id="pizza-section" class="menu-section">
+                        <div class="menu-items-container"></div> <!-- Container for pizza items -->
+                    </div>
+        </section>
+
+        <section id="hamburgers" class="menu-section">
+            <div class="item-name">
+                <h3>Hamburgers</h3>
+            </div>
+                <div id="hamburgers-section" class="menu-section">
+                    <div class="menu-items-container"></div>
+                    <!-- Burger items will be dynamically added here -->
+                </div>
+        </section>
+
+        <section id="sandwiches" class="menu-section">
+            <div class="item-name">
+                <h3>Sandwiches</h3>
+            </div>
+                <div id="sandwiches-section" class="menu-section">
+                    <div class="menu-items-container"></div>
+                    <!-- sandwich items will be dynamically added here -->
+                </div>
+        </section>
+
+        <section id="desserts" class="menu-section">
+            <div class="item-name">
+                <h3>Desserts</h3>
+            </div>
+                <div id="desserts-section" class="menu-section">
+                    <div class="menu-items-container"></div>
+                    <!-- dessert items will be dynamically added here -->
+                </div>
+        </section>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h3>Growl Food Cafeteria®</h3>
+            <p>Providing healthy and delicious food for all students and staff.</p>
+            <ul class="socials">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>© Growl Cafeteria 2024 | Designed by Diego Garcia</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>
+    <!--Create a Ordering platform?-->

@@ -1,0 +1,262 @@
+/* Nav Style */
+.container nav {
+    position: fixed; /* Makes the navigation bar sticky */
+    top: 60px; /* Sets the distance from the top of the viewport */
+    z-index: 999; /* Specifies the stacking order of the element */
+    justify-content: center;
+}
+
+.container nav ul {
+    backdrop-filter: blur(10px); /* Applies a blur effect to the background */
+    color: #333; /* Sets the text color to dark */
+    padding: .5rem; /* Adds padding around the unordered list */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center the items horizontally */
+    
+}
+
+.container nav a {
+    font-weight: bold; /* Makes the text bold */
+    text-decoration: none; /* Removes the default underline */
+    padding-bottom: 5px; /* Adds space below the anchor text */
+    
+}
+
+.container nav ul li a {
+    position: relative; /* Set position relative to allow positioning of pseudo-element */
+    color: #333; /* Default color */
+    padding-bottom: 5px; /* Adds space below the anchor text */
+    
+}
+
+/* Adjust red line effect */
+.container nav ul li a::after {
+    content: ''; /* Adds content after the anchor text */
+    position: absolute; /* Sets the position of the pseudo-element */
+    width: 0; /* Sets the initial width of the line to zero */
+    height: 2px; /* Sets the height of the line */
+    background-color: #cd1d1d; /* Sets the color of the line */
+    bottom: 0; /* Positions the line at the bottom of the anchor */
+    left: 0; /* Aligns the line with the left edge of the anchor */
+    right: 0; /* Aligns the line with the right edge of the anchor */
+    margin: auto; /* Centers the line horizontally */
+    transition: width 0.3s ease, left 0.3s ease, right 0.3s ease; /* Adds transitions for width, left, and right properties */
+}
+
+/* Adjust red line width and position on hover */
+.container nav ul li a:hover::after {
+    width: 100%; /* Sets the width of the line to 100% on hover */
+}
+
+.container nav a {
+    color: black; /* Change the color to black */
+    text-decoration: none; /* Remove the underline */
+    margin-right: 20px; /* Adjust as needed */
+}
+
+.container nav a:hover {
+    color: #cd1d1d;
+}
+
+/*shopping cart styles*/
+#cart-menu {
+    display: flex;
+    flex-direction:row;
+    top: 50px; /* Adjust as needed */
+    right: 150px; /* Adjust as needed */
+    background-color: rgba(255, 255, 255, 0.883); /* Transparent white */
+    backdrop-filter: blur(40px); /* Add backdrop filter for blur effect (optional) */
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: center;
+}
+.checkout-button {
+    padding: 10px;
+    margin: 10px;
+}
+.remove-button{
+    font-size: 12px; /* Adjust the font size */
+    padding: 5px 10px; /* Adjust the padding */
+    margin: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Menu Items Styles */
+/* General Styles */
+
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#menu{
+    margin-top: 80px;
+}
+/* Menu Section Styles */
+.menu-section {
+    margin: 20px;
+}
+/* Item Name Styles */
+.item-name {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+/* Default styles */
+.menu-items-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr)); /* Initially, display 2 columns with a minimum width of 300px */
+    gap: 20px; /* Adjust spacing between items as needed */
+    justify-content: center;
+}
+
+
+
+/* Menu Item Styles */
+.menu-item {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #f3f2f2b2;
+    padding: 0;
+    border-radius: 0;
+    border: 1px solid #121212; /* Add border */
+    overflow: hidden;
+    align-items: flex-start;
+    margin: 10px; /* Space between items vertically */
+    margin-bottom: 10px; /* Additional margin-bottom */
+}
+
+
+
+
+
+
+
+/* Media query to transition to one column when the browser width is below a certain threshold */
+@media screen and (max-width: 600px) {
+    .menu-items-container {
+        grid-template-columns: 1fr; /* Switch to one column layout */
+    }
+}
+/* Media Queries */
+@media (min-width: 1024px) {
+    .menu-item-container {
+        
+        padding: 22px var(--space-md) 0;
+        position: relative; /* Positioning context for child elements */
+    }
+
+    .item-details {
+        height: 178px;
+    }
+
+    
+}
+
+/* Menu Item Image Styles */
+.menu-item img {
+    width: 150px; 
+    height: auto;
+}
+
+/* Item Details Styles */
+.item-details {
+    flex: 1; /* Distribute available space equally between image and details */
+    margin-left: 20px; /* Add spacing between image and details */
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Item Name Styles */
+.item-details h3 {
+    font-size: 18px;
+    
+    color: #fca35d;
+    font-weight: 100;
+}
+
+/* Item Description Styles */
+.item-details p {
+    font-size: 14px;
+    padding: 10px; /* Add padding to item description */
+}
+
+/* Item Price Styles */
+.item-details span {
+    font-size: 12px;
+    color: #fff;
+    background-color: #fca35d;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+/* Item Details Button Styles */
+.item-details button {
+    margin-left: 10px;
+    margin-top: 10px; /* Add top margin to button */
+    margin-bottom: 10px; /* Add bottom margin to button */
+    
+}
+
+
+
+/* Style for the item details container */
+.item-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Style for the price and controls container */
+.price-and-controls-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensure order button aligns to right */
+    align-items: center;
+}
+
+/* Style for the quantity controls */
+.quantity-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Style for the decrease and increase buttons */
+.quantity-controls button {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    color: #495057;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.375rem 0.75rem;
+    margin: 0 5px; /* Adjust spacing between buttons as needed */
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-controls button:hover {
+    background-color: #e9ecef;
+}
+
+/* Style for the input field */
+.quantity-controls input {
+    width: 50px; /* Adjust width of input field as needed */
+    padding: 5px;
+    text-align: center;
+}
+
+/* Style for the order button */
+.item-details button {
+font-size: smaller;
+}
+
+
